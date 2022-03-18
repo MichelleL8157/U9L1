@@ -28,6 +28,12 @@ public class Encryption {
         return rows;
     }
 
+    public void testCheckArray(String[][] array) {
+        for (String[] row: array) {
+            System.out.println(Arrays.toString(row));
+        }
+    }
+
     public String encryptor(String message) {
         int rows = rowsNeed(message);
         int cols = message.length() / rows;
@@ -52,10 +58,8 @@ public class Encryption {
                 index++;
             }
         }
-        /*System.out.println("After change in letter:");
-        for (String[] row: temp) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //System.out.println("After change in letter:");
+        //testCheckArray(temp);
         String[][] temp2 = new String[rows][cols];
         for (int row = 0; row != rows; row++) {
             for (int col = 0; col != cols; col++) {
@@ -66,10 +70,8 @@ public class Encryption {
                 temp2[row][moved] = temp[row][col];
             }
         }
-        /*System.out.println("Change in col:");
-        for (String[] row: temp2) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //System.out.println("Change in col:");
+        //testCheckArray(temp2);
         String[][] temp3 = new String[rows][cols];
         for (int col = 0; col != cols; col++) {
             for (int row = 0; row != rows; row++) {
@@ -80,10 +82,8 @@ public class Encryption {
                 temp3[moved][col] = temp2[row][col];
             }
         }
-        /*System.out.println("Change in row:");
-        for (String[] row: temp3) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //.out.println("Change in row:");
+        //testCheckArray(temp3);
         String encryptedWord = "";
         for (String[] row: temp3) {
             for (String letter: row) {
@@ -117,10 +117,8 @@ public class Encryption {
                 index++;
             }
         }
-        /*System.out.println("After change in letter:");
-        for (String[] row: temp) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //System.out.println("After change in letter:");
+        //testCheckArray(temp);
         String[][] temp2 = new String[rows][cols];
         for (int row = 0; row != rows; row++) {
             for (int col = 0; col != cols; col++) {
@@ -131,10 +129,8 @@ public class Encryption {
                 temp2[row][moved] = temp[row][col];
             }
         }
-        /*System.out.println("Change in col:");
-        for (String[] row: temp2) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //System.out.println("Change in col:");
+        //testCheckArray(temp2);
         String[][] temp3 = new String[rows][cols];
         for (int col = 0; col != cols; col++) {
             for (int row = 0; row != rows; row++) {
@@ -145,10 +141,8 @@ public class Encryption {
                 temp3[moved][col] = temp2[row][col];
             }
         }
-        /*System.out.println("Change in row:");
-        for (String[] row: temp3) {
-            System.out.println(Arrays.toString(row));
-        }*/
+        //System.out.println("Change in row:");
+        //testCheckArray(temp3);
         String decryptedWord = "";
         for (String[] row: temp3) {
             for (String letter: row) {

@@ -13,7 +13,7 @@ public class EncryptionRunner {
         else { System.out.println("TEST FAILED"); }
         System.out.println();
 
-        //testing shift in col
+        //testing shift in row
         Encryption test2 = new Encryption(0, 2, 0);
         String ogWord2 = "abcdefghi";
         String expected2 = "defghiabc";
